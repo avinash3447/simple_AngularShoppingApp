@@ -22,7 +22,7 @@
 <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/">Smartfrog Coding Test</a>
+        <a class="navbar-brand" href="/">The Product details Page</a>
       </div>
 
       <ul class="nav navbar-nav navbar-right Desktop">
@@ -45,8 +45,8 @@
                   <div class="cardHeader1 inCenter">Komplettlosung</div>
                   <img class="card-img-top img-responsive" src="Capture.PNG" alt="Card image cap">
                   <div class="row">
-                    <div class="col-sm-4 col-xs-4 col-md-4 imgDesc">Smartfrog<br>app</div>
-                    <div class="col-sm-3 col-xs-4 col-md-4 imgDesc">Smartfrog<br>kamera</div>
+                    <div class="col-sm-4 col-xs-4 col-md-4 imgDesc">Simple<br>app</div>
+                    <div class="col-sm-3 col-xs-4 col-md-4 imgDesc">Simple<br>kamera</div>
                     <div class="col-sm-5 col-xs-4 col-md-4 imgDesc">24 Std.<br>Videospeicher</div>
                   </div>
                   <br>
@@ -73,8 +73,8 @@
                   <div class="cardHeader1 inCenter">Kamera-Packet</div>
                   <img class="card-img-top img-responsive" src="Capture.PNG" alt="Card image cap">
                   <div class="row ">
-                    <div class="col-sm-4 col-xs-4 col-md-4 imgDesc">Smartfrog<br>app</div>
-                    <div class="col-sm-3 col-xs-4 col-md-4 imgDesc">Smartfrog<br>kamera</div>
+                    <div class="col-sm-4 col-xs-4 col-md-4 imgDesc">Simple<br>app</div>
+                    <div class="col-sm-3 col-xs-4 col-md-4 imgDesc">Simple<br>kamera</div>
                     <div class="col-sm-5 col-xs-4 col-md-4 imgDesc">4 Std.<br>Videospeicher</div>
                   </div>
                   <br>
@@ -121,8 +121,8 @@
                                 <div class="cardHeader1 inCenter">Komplettlosung</div>
                                 <img class="card-img-top img-responsive" src="Capture.PNG" alt="Card image cap">
                                 <div class="row">
-                                  <div class="col-sm-4 col-xs-4 col-md-4 imgDesc">Smartfrog<br>app</div>
-                                  <div class="col-sm-3 col-xs-4 col-md-4 imgDesc">Smartfrog<br>kamera</div>
+                                  <div class="col-sm-4 col-xs-4 col-md-4 imgDesc">Simple<br>app</div>
+                                  <div class="col-sm-3 col-xs-4 col-md-4 imgDesc">Simple<br>kamera</div>
                                   <div class="col-sm-5 col-xs-4 col-md-4 imgDesc">24 Std.<br>Videospeicher</div>
                                 </div>
                                 <br>
@@ -163,5 +163,31 @@
 <footer class="text-center">
    Footer
   </footer>
+   <script type="text/javascript">
+  // document.getElementById("qty").addEventListener('change',function(){
+  //   var cal = document.querySelector('.cal');
+  //   qty = document.getElementById(this.value);
+  //   var total = qty*4.95;
+  //   document.getElementById('monatCost').innerHTML = total;
+  // })
+function calculate(qnt,price,id){
+console.log(id);
+  // var qnt = document.getElementById("qty").value;
+if(id == "qty2"){
+    var total = qnt*price;
+    document.getElementById('monatCost2').innerHTML = total.toFixed(2);
+    document.getElementById('totalCost2').innerHTML = total.toFixed(2);
+    document.getElementById('sum2').innerHTML = total.toFixed(2);
+    }
+    else{
+    var total = qnt*price;
+    document.getElementById('monatCost').innerHTML = total.toFixed(2);
+    document.getElementById('totalCost').innerHTML = total.toFixed(2);
+    document.getElementById('sum').innerHTML = total.toFixed(2);
+   } 
+    
+}
+</script>
 </body>
+
 </html>
