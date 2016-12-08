@@ -1,6 +1,11 @@
-<div class="jumbotron text-center">
-	<h1>First page</h1>
-	
-	<p>{{ message }}</p>
-	<div>{{users}}</div>
+<div id= "noBackground" class="jumbotron text-center">
+	<div id="welcomeTxt">
+	<!-- Can be retrived using the jwtToken, but since i dont have any condition to check, i am just displaying the first record -->
+		Hello <span style="font-weight: 500;">{{users.records[0].name}}</span>,Your login email is <span style="font-weight: 500;">{{users.records[0].email}}</span> Welcome to the product list Page.
+	</div>
+	<div>
+		Click on <span style="font-weight: 500;">Add to cart</span> to view the details and the price list.
+	</div>
+	<!-- <p>{{ message }}</p>
+	<div>{{users}}</div> -->
 </div>

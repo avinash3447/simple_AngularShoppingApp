@@ -1,5 +1,221 @@
 <div class="jumbotron text-center">
-	<h1>Page2 Page</h1>
-	
-	<p>{{ message }}</p>
+	<div>{{ message }}</div>
+
+	<div class="Desktop">
+      <div class="container">
+      	<div class="row headTable leftAlign">
+      		<div class= 'col-sm-4 col-md-4'>
+      			Artikel
+      		</div>
+      		<div class= 'col-sm-6  col-md-3 details'>
+      			Details
+      		</div>
+      		<div class= 'col-sm-4 col-md-2'>
+      			Anzahl
+      		</div>
+      		<div class= 'col-sm-2 col-md-3'>
+      			Preis
+      		</div>
+      	</div>
+      	<div ng-show="cartEmpty" style="color: orange">{{ emptyMessage }}</div>
+      	<div class="row leftAlign" ng-show="showMe">
+
+      		<div class= 'col-sm-4 col-xs-4 col-md-4'>
+      			<div style="display: table-row">
+				    <div class="img">
+				    <img src="cam.PNG">
+				    </div>
+				    <div style="display: table-cell; vertical-align: middle" class="prodTitle">
+				      Smartfrog Komplettlosung<sup>*</sup><br><!-- <span class="notVisible" style="font-size: 14px">inkl. 24 std. Video-speicher(gratis)<br><span style="color: red">10% Rabatt fur jede weitere kamra<sup>**</sup></span></span>  -->      
+				    </div>
+				</div>
+      		</div>
+      		<div class= 'col-sm-4 col-xs-4 col-md-3 details'>
+      			<p style="font-size: 14px">inkl. 24 std. Video-speicher(gratis)<br><span style="color: red">10% Rabatt fur jede weitere kamra<sup>**</sup></span></p>
+      		</div>
+      		<div class= 'col-sm-4 col-xs-4 col-md-2'>
+      			<select id='qty' class="selectpicker" onchange="calculate(this.value, 4.95,'qty')">
+				  <option value="1">1</option>
+				  <option value="2">2</option>
+				  <option value="3">3</option>
+				  <option value="4">4</option>
+				  <option value="5">5</option>
+				</select>
+      		</div>
+      		<div class= 'col-sm-4 col-xs-4 col-md-3'>
+				    <div class="row leftAlign">
+				    	<div id="prod1" class="col-md-9 col-sm-8 prisetag">4,95 &#8364; / mtl.</div> 
+				    
+				        <div class="col-md-3 col-sm-4">
+							<button type="button" class="btn btn-primary noFill" ng-click="clearCart()">
+					        	<svg style="width:22px;height:22px" viewBox="0 0 24 24">
+								    <path fill="#cfd8dc" d="M19,3H16.3H7.7H5A2,2 0 0,0 3,5V7.7V16.4V19A2,2 0 0,0 5,21H7.7H16.4H19A2,2 0 0,0 21,19V16.3V7.7V5A2,2 0 0,0 19,3M15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4L13.4,12L17,15.6L15.6,17Z" />
+								</svg>
+							</button>
+
+						</div>
+				    </div>
+				
+      		</div>
+      	</div>
+<hr>
+		<div class="row" >
+			<div class="col-sm-6 col-md-4">
+				<div class="input-group" ng-show="showMe">
+			      <input type="text" class="form-control" placeholder="Insert coupon code" style="background-color: #eceff1 ">
+			      <span class="input-group-btn">
+			        <button class="btn btn-secondary btnCode" type="button">Apply</button>
+			      </span>
+			    </div>
+			</div>
+
+			<div class="col-sm-6 col-md-3"></div>
+
+			<div class="col-sm-6 col-md-5" style="font-size: 14px;">
+				<div class="row">
+					<div class="col-md-8 col-sm-6 leftAlign">
+						Einmalige Kosten
+					</div>
+					<div class="col-md-4 col-sm-6 alignRight">
+						0,00 &#8364;
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-sm-6 leftAlign">
+						Monatliche Kosten
+					</div>
+					<div id="monatCost" class="col-md-4 col-sm-6 alignRight">
+						4.95 &#8364;	
+					</div>
+				</div>
+				<hr>
+				<div class="row" style="font-weight: bold">
+					<div class="col-md-8 col-sm-6 leftAlign">
+						Zwischesumme
+					</div>
+					<div id="totalCost" class="col-md-4 col-sm-6 alignRight">
+						4,95 &#8364;	
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-sm-6 leftAlign">
+						Versandkosten
+					</div>
+					<div class="col-md-4 col-sm-6 alignRight">
+						0,00 &#8364;	
+					</div>
+				</div>
+				<hr style="height:1px;border:none;color:#333;background-color:#333;" />
+				<div class="row" style="font-weight: bold;font-size: 20px">
+					<div class="col-md-8 col-sm-6 leftAlign">
+						Gesamtsumme
+					</div>
+					<div id="sum" class="col-md-4 col-sm-6 alignRight">
+						4,95 &#8364;	
+					</div>
+				</div>
+				<div class='alignRight' style="font-size: 10px">Inkl.MwSt(19%)</div>
+			</div>
+		</div>
+		<div class="alignRight" ng-show="showMe">
+			<button type="button" class="btn btn-primary">Zur Kasse genhen &#10095;</button>
+		</div>
+      </div>
+
+</div>
+
+<div class="mobile">
+
+	<div class="row">
+	<div class="col-xs-10" style="display: table-row" ng-show="showMe">
+	    <div class="img" style="vertical-align: middle;">
+	    <img src="cam.PNG">
+	    </div>
+	    <div style="display: table-cell; vertical-align: middle;font-size: 14px" class="leftAlign">
+	      <span style='font-weight: bold'>Smartfrog Komplettlosung</span><sup>*</sup><br>inkl. 24 std. Video-speicher(gratis)<br><span style="color: red">10% Rabatt fur jede weitere kamra<sup>**</sup></span>      
+	    </div>
+	    
+	</div>
+	<div class="col-xs-2" style="vertical-align: middle;text-align: right">
+	    	<button type="button" class="btn btn-primary noFill" ng-show="showMe" ng-click="clearCart()">
+	        	<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+				    <path fill="#cfd8dc" d="M19,3H16.3H7.7H5A2,2 0 0,0 3,5V7.7V16.4V19A2,2 0 0,0 5,21H7.7H16.4H19A2,2 0 0,0 21,19V16.3V7.7V5A2,2 0 0,0 19,3M15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4L13.4,12L17,15.6L15.6,17Z" />
+				</svg>
+			</button>
+	</div>
+	</div>
+	<div ng-show="cartEmpty" style="color: orange">{{ emptyMessage }}</div>
+
+	<div class="row" ng-show="showMe">
+		<div class="col-xs-6">
+			<select id='qty2' class="selectpicker" onchange="calculate(this.value,4.95,'qty2')" style="width: 50px">
+				  <option value="1">1</option>
+				  <option value="2">2</option>
+				  <option value="3">3</option>
+				  <option value="4">4</option>
+				  <option value="5">5</option>
+			</select>
+		</div>
+		<div class="col-xs-6">
+			4,95 &#8364; / mtl.
+		</div>
+	</div>
+	<hr>
+	<div class="row smallFont">
+		<div class="col-xs-6 leftAlign">
+			Einmalige Kosten
+		</div>
+		<div class="col-xs-6 alignRight">
+			0,00 &#8364;
+		</div>
+	</div>
+
+	<div class="row smallFont">
+		<div class="col-xs-6 leftAlign">
+			Monatliche Kosten
+		</div>
+		<div id="monatCost2" class="col-xs-6 alignRight">
+			4.95 &#8364;	
+		</div>
+	</div>
+	<hr>
+	<div class="row smallFont" style="font-weight: bold">
+		<div class="col-xs-6 leftAlign">
+			Zwischesumme
+		</div>
+		<div id="totalCost2" class="col-xs-6 alignRight">
+			4,95 &#8364;	
+		</div>
+	</div>
+	<div class="row smallFont">
+		<div class="col-xs-6 leftAlign">
+			Versandkosten
+		</div>
+		<div class="col-xs-6 alignRight">
+			0,00 &#8364;	
+		</div>
+	</div>
+	<hr style="height:1px;border:none;color:#333;background-color:#333;" />
+	<div class="row smallFont" style="font-weight: bold;font-size: 20px">
+		<div class="col-xs-6 leftAlign">
+			Gesamtsumme
+		</div>
+		<div id="sum2" class="col-xs-6 alignRight">
+			4,95 &#8364;	
+		</div>
+	</div>
+	<div class='alignRight' style="font-size: 10px">Inkl.MwSt(19%)</div>
+	<div class="input-group" ng-show="showMe">
+      <input type="text" class="form-control" placeholder="Insert coupon code" style="background-color: #eceff1 ">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary btnCode" type="button">Apply</button>
+      </span>
+    </div>
+	<div class="inCenter" ng-show="showMe">
+			<button type="button" class="btn btn-primary">Zur Kasse genhen &#10095;</button>
+		</div>
+
+</div>
+
+
 </div>

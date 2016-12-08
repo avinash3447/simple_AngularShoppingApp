@@ -1,0 +1,194 @@
+
+
+.inCenter {
+	text-align: center;
+}
+
+.body{
+	background-color: black;
+}
+.jumbotron {
+	background-color: white;
+}
+
+.cardHeader1{
+	color: orange;
+	font-weight: 500;
+}
+.card{
+	border-color: orange;
+	border-width: 2px;
+}
+.imgDesc{
+	font-size: xx-small;
+	text-align: center;
+	color: grey;
+}
+
+img {
+    
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.orangeBox{
+	background-color: #f57c00;
+}
+.whiteTxt{
+	color: white;
+}
+.card-block {
+	padding: 0px;
+}
+.lestPad{
+	padding-left: 20px;
+}
+.moreDetils{
+	color: blue;
+	font-size: 10px;
+	padding: 10px;
+}
+.priceTag{
+	color: #d50000;
+	font-weight: 600;
+}
+.btnPadding{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+/*for mobile mode*/
+ @media only screen and (max-width: 601px) {
+ 	.orangeBox{
+ 		font-size: 14px;
+ 	}
+ 	.whiteBox{
+ 		font-size: 14px;
+ 	}
+ 	.headTable{
+ 		font-size: 10px;
+ 	}
+ 	
+ 	.prodTitle {
+ 	font-size: 12px !important;
+ 	font-weight: 300 !important;
+ 	}	
+ 	.details{
+ 		display: none;
+ 	}
+ 	.prisetag{
+ 		font-size: 14px;
+ 	}
+ 	.Desktop{
+ 		display: none;
+ 	}
+
+ }
+/*for tablet mode*/
+ @media only screen and (min-width : 601px) {
+    
+    .mobile{
+    	display: none;
+    }
+    .prodTitle{
+ 	font-size: 20px;
+ 	font-weight: 500;
+ 		}
+ 	.headTable{
+ 		font-size: 14px;
+ 	}
+
+ 	
+    }
+
+ @media only screen and (max-width : 801px) {
+
+	.details{
+ 		display: none;
+ 	}
+ 	.prodTitle {
+ 	font-size: 12px !important;
+ 	/*font-weight: 400 !important;*/
+ 	font-style: bold;
+ 	}	
+ 	.prisetag{
+ 		font-size: 16px !important;
+ 	}	
+ 	/*.notVisible{
+ 		display: none;
+ 	}*/
+ }
+
+
+.headTable{
+ 	background-color: #eceff1;
+ 	font-weight: 400;
+ }
+ .leftAlign{
+ 	text-align: left !important;
+ }
+ .img{
+ 	width:20px;
+ 	height:20px;
+ 	display:table-cell;
+
+ }
+ .selectpicker{
+ 	border-radius: 5px;
+ 	background-color: #eceff1;
+ 	border-color: #eceff1;
+ }
+
+select{
+	font-size: 14px;
+}
+input{
+	border-style: none;
+}
+.btnCode{
+	height: 34px;
+	background-color: #f57f17;
+}
+.alignRight{
+	text-align: right;
+	
+}
+.oneLine{
+	display: inline;
+}
+.customNav{
+	background-color: blue;
+}
+
+.noBorder{
+	border-style: none;
+}
+.panel-primary>.panel-heading {
+    color: #fff;
+     background-color: white; 
+    border-color: white;
+}
+.mobileCard{
+	border-style: none;
+}
+.tabBack{
+	background-color: blue;
+	color: white; 
+}
+
+.smallFont{
+	font-size: 16px;
+}
+
+/*CSS for the Mobile tabs*/
+.noFill{
+	background-color: white;
+	border-style: none;
+}
+
+.noFill:hover{
+	background-color: white;
+	border-style: none;
+}
